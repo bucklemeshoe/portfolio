@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     description: "Product designer and entrepreneur based in Cape Town. I help companies and founders create digital products that people love to use.",
           images: [
         {
-          url: "/images/bucklemeshoe%20_%20Social%20Media%20Sharing%20Image.png",
+          url: "/images/bucklemeshoe-social-sharing-image.png",
           width: 1200,
           height: 630,
           alt: "Jared Buckley - Product Designer and Entrepreneur",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       creator: "@bucklemeshoe",
       title: "Jared Buckley - Product Designer, Entrepreneur & Digital Explorer",
       description: "Product designer and entrepreneur based in Cape Town. I help companies and founders create digital products that people love to use.",
-      images: ["/images/bucklemeshoe%20_%20Social%20Media%20Sharing%20Image.png"],
+      images: ["/images/bucklemeshoe-social-sharing-image.png"],
     },
   verification: {
     google: "your-google-verification-code",

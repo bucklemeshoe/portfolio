@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
         },
              ] : [
          {
-                       url: "/images/bucklemeshoe%20_%20Social%20Media%20Sharing%20Image.png",
+                       url: "/images/bucklemeshoe-social-sharing-image.png",
            width: 1200,
            height: 630,
            alt: "Jared Buckley - Blog Post",
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt || `Read ${post.title} by Jared Buckley.`,
-      images: post.heroImage ? [post.heroImage] : ["/images/bucklemeshoe%20_%20Social%20Media%20Sharing%20Image.png"],
+      images: post.heroImage ? [post.heroImage] : ["/images/bucklemeshoe-social-sharing-image.png"],
     },
   };
 }
