@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Calendar, Clock, ExternalLink } from "lucide-react";
 import { Container } from "@/components/Container";
 import { Navigation } from "@/components/Navigation";
@@ -139,6 +140,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </p>
                 )}
               </header>
+
+              {/* Hero Image */}
+              {post.heroImage && (
+                <div className="mb-12">
+                  <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden">
+                    <Image
+                      src={post.heroImage}
+                      alt={post.title}
+                      fill
+                      className={`object-${post.heroImageFit || 'cover'}`}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                    />
+                  </div>
+                </div>
+              )}
 
               {/* Content */}
               <div className="prose prose-lg max-w-none">

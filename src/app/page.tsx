@@ -290,7 +290,7 @@ export default function Home() {
                 Writing
               </h2>
               <p className="mt-6 text-base text-zinc-600">
-                I write about design, technology, and the intersection of human behavior and digital products. Here are some of my recent thoughts and case studies.
+                I&apos;ll write about crooked experiences (that could have been better), things I wish existed, and other stuff. Here are few of my older thoughts and case studies.
               </p>
 
                               {/* Filter Buttons */}
