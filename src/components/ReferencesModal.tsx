@@ -22,7 +22,7 @@ export function ReferencesModal({
       {/* Floating References Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 bg-gradient-to-r from-pink-400 to-fuchsia-500 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2 font-medium z-40 ${buttonClassName}`}
+        className={`fixed bottom-6 right-6 bg-gradient-to-r from-pink-400 to-fuchsia-500 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2 font-medium z-40 cursor-pointer ${buttonClassName}`}
       >
         <FileText className="h-5 w-5" />
         <span className="hidden sm:inline">Read References</span>
