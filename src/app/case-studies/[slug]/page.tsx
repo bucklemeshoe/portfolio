@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
         },
              ] : [
          {
-           url: "/images/bucklemeshoe _ Social Media Sharing Image.png",
+                       url: "/images/bucklemeshoe%20_%20Social%20Media%20Sharing%20Image.png",
            width: 1200,
            height: 630,
            alt: "Jared Buckley - Case Study",
@@ -81,7 +81,7 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
       card: "summary_large_image",
       title: study.title,
       description: study.meta_description || `Case study: ${study.title}. Insights on UX design and product strategy.`,
-      images: study.images && study.images.length > 0 ? [study.images[0].src] : ["/images/bucklemeshoe _ Social Media Sharing Image.png"],
+      images: study.images && study.images.length > 0 ? [study.images[0].src] : ["/images/bucklemeshoe%20_%20Social%20Media%20Sharing%20Image.png"],
     },
   };
 }
