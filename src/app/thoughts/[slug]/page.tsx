@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Calendar, Clock, ExternalLink } from "lucide-react";
+import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Container } from "@/components/Container";
 import { Navigation } from "@/components/Navigation";
 import { ReferencesModal } from "@/components/ReferencesModal";
@@ -187,20 +187,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               )}
 
-              {/* Original Post Link */}
-              {post.url && (
-                <div className="mt-8 pt-8 border-t border-gray-100">
-                  <Link
-                    href={post.url}
-                    className="inline-flex items-center text-pink-600 hover:text-pink-700 font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Read original post
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
-              )}
+
             </div>
           </Container>
         </article>
@@ -222,7 +209,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 className="inline-flex items-center bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
               >
                 Get In Touch
-                <ExternalLink className="ml-2 h-4 w-4" />
+
               </Link>
               </div>
             </div>
