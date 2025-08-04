@@ -163,7 +163,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
               {/* Main Image */}
               {caseStudy.images && caseStudy.images.length > 0 && (
-                <div className="relative h-64 md:h-96 rounded-lg overflow-hidden mb-12 bg-gray-50">
+                <div className="relative h-[calc(16rem+70px)] md:h-[calc(24rem+70px)] rounded-lg overflow-hidden mb-12 bg-gray-50">
                   <Image
                     src={caseStudy.images[0].src}
                     alt={caseStudy.images[0].alt}
