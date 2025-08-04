@@ -149,7 +149,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       src={post.heroImage}
                       alt={post.title}
                       fill
-                      className={`object-${post.heroImageFit || 'cover'}`}
+                      className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                     />
                   </div>
