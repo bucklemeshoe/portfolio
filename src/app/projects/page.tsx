@@ -175,10 +175,10 @@ export default function ProjectsPage() {
                 >
                   volition
                   {showTooltip && (
-                    <span className="absolute left-full top-1/2 transform -translate-y-1/2 ml-3 px-3 py-2 bg-zinc-800 text-white text-sm rounded-lg shadow-lg whitespace-nowrap z-50">
+                    <div className="absolute left-full top-1/2 transform -translate-y-1/2 ml-3 bg-zinc-800 text-white text-sm px-3 py-2 rounded-lg shadow-lg whitespace-nowrap z-50">
                       the faculty or power of using one&apos;s will
-                      <span className="absolute right-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-t-4 border-b-4 border-r-4 border-transparent border-r-zinc-800"></span>
-                    </span>
+                      <div className="absolute right-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-t-4 border-b-4 border-r-4 border-transparent border-r-zinc-800"></div>
+                    </div>
                   )}
                 </span>.
               </h1>
