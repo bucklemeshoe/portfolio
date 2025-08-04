@@ -121,7 +121,7 @@ export default function ContentManagement() {
     };
     
     // Simulate save
-    console.log('Saving:', dataToSave);
+    // console.log('Saving:', dataToSave);
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     setIsLoading(false);

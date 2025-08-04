@@ -744,7 +744,7 @@ export default function AdminDashboard() {
                             sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                             className="object-cover"
                             onError={() => {
-                              console.log('Image failed to load:', item.path);
+                              // console.log('Image failed to load:', item.path);
                             }}
                           />
                         )}

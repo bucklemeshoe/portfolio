@@ -3,7 +3,7 @@ export class AuthService {
   private static readonly PASSWORD = process.env.ADMIN_PASSWORD;
 
   static async authenticate(password: string): Promise<boolean> {
-    if (password === 'Lemons123**') {
+    if (password === this.PASSWORD) {
       if (typeof window !== 'undefined') {
         sessionStorage.setItem(this.SESSION_KEY, 'true');
       }

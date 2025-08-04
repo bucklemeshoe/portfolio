@@ -521,7 +521,7 @@ export default function MediaBankPage() {
                       fill
                       className="object-cover"
                       onError={() => {
-                        console.log('Image failed to load:', item.path);
+                        // console.log('Image failed to load:', item.path);
                       }}
                     />
                     <div className="absolute top-2 right-2 flex gap-1">
