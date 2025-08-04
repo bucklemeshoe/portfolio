@@ -1,0 +1,68 @@
+{
+  "main": [
+    {
+      "title": "Home",
+      "url": "/",
+      "type": "page"
+    },
+    {
+      "title": "About",
+      "url": "/about",
+      "type": "page"
+    },
+    {
+      "title": "Case Studies",
+      "url": "/case-studies",
+      "type": "section"
+    },
+    {
+      "title": "Design",
+      "url": "/design",
+      "type": "section"
+    },
+    {
+      "title": "Thoughts",
+      "url": "/thoughts",
+      "type": "section"
+    },
+    {
+      "title": "Travel",
+      "url": "/travel",
+      "type": "section"
+    },
+    {
+      "title": "Contact",
+      "url": "/contact",
+      "type": "page"
+    }
+  ],
+  "design": [
+    {
+      "title": "Design Examples",
+      "url": "/design/examples",
+      "type": "page"
+    },
+    {
+      "title": "Process",
+      "url": "/design/process",
+      "type": "page"
+    },
+    {
+      "title": "Nitpicking",
+      "url": "/design/nitpicking",
+      "type": "page"
+    }
+  ],
+  "travel": [
+    {
+      "title": "Writing",
+      "url": "/travel/writing",
+      "type": "section"
+    },
+    {
+      "title": "Photos",
+      "url": "/travel/photos",
+      "type": "section"
+    }
+  ]
+}
