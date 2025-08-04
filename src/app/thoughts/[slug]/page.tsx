@@ -144,7 +144,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {/* Hero Image */}
               {post.heroImage && (
                 <div className="mb-12">
-                  <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden">
+                  <div className="relative w-full h-80 md:h-[calc(6rem+70px)] rounded-lg overflow-hidden">
                     <Image
                       src={post.heroImage}
                       alt={post.title}
