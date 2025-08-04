@@ -115,13 +115,10 @@ export default function ContentManagement() {
   const handleSave = async (publish: boolean = false) => {
     setIsLoading(true);
     
-    const dataToSave = {
-      ...formData,
-      published: publish
-    };
+    // Update form data with publish status
+    handleInputChange('published', publish);
     
     // Simulate save
-    // console.log('Saving:', dataToSave);
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     setIsLoading(false);
