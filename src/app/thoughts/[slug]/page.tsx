@@ -20,19 +20,50 @@ export async function generateStaticParams() {
   }));
 }
 
+// Generate metadata for individual blog posts
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPostsData.find((p) => p.id === slug);
+  const post = blogPostsData.find(post => post.id === slug);
   
   if (!post) {
     return {
-      title: "Post Not Found",
+      title: "Post Not Found - Jared Buckley",
+      description: "The requested blog post could not be found.",
     };
   }
 
   return {
     title: `${post.title} - Jared Buckley`,
-    description: post.excerpt || `Blog post: ${post.title}`,
+    description: post.excerpt || `Read ${post.title} by Jared Buckley. Insights on UX design, product strategy, and digital experiences.`,
+    keywords: ["blog", "UX design", "product strategy", "thoughts", "Jared Buckley", ...(post.tags || [])],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt || `Read ${post.title} by Jared Buckley.`,
+      type: "article",
+      url: `https://www.bucklemeshoe.com/thoughts/${post.id}`,
+      images: post.heroImage ? [
+        {
+          url: post.heroImage,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+             ] : [
+         {
+           url: "/images/bucklemeshoe _ Social Media Sharing Image.png",
+           width: 1200,
+           height: 630,
+           alt: "Jared Buckley - Blog Post",
+         },
+       ],
+      publishedTime: post.date,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt || `Read ${post.title} by Jared Buckley.`,
+      images: post.heroImage ? [post.heroImage] : ["/images/bucklemeshoe _ Social Media Sharing Image.png"],
+    },
   };
 }
 

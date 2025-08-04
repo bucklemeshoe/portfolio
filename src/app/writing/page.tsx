@@ -9,6 +9,7 @@ import { ReferencesModal } from '@/components/ReferencesModal';
 import { Footer } from '@/components/Footer';
 import clsx from 'clsx';
 
+
 // Import the data
 import blogPosts from '@/data/blog-posts.json';
 import caseStudies from '@/data/case-studies.json';

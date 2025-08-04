@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ExternalLink, Calendar, Clock } from "lucide-react";
@@ -7,6 +6,7 @@ import { Navigation } from "@/components/Navigation";
 import { ReferencesModal } from "@/components/ReferencesModal";
 import { Footer } from "@/components/Footer";
 import caseStudiesData from "@/data/case-studies.json";
+import type { Metadata } from "next";
 
 interface CaseStudyData {
   id: string;
@@ -34,24 +34,55 @@ interface CaseStudyPageProps {
 }
 
 export async function generateStaticParams() {
-  return caseStudiesData.map((caseStudy) => ({
-    slug: caseStudy.id,
+  return caseStudiesData.map((study) => ({
+    slug: study.id,
   }));
 }
 
+// Generate metadata for individual case studies
 export async function generateMetadata({ params }: CaseStudyPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const caseStudy = caseStudiesData.find((cs) => cs.id === slug);
+  const study = caseStudiesData.find(study => study.id === slug);
   
-  if (!caseStudy) {
+  if (!study) {
     return {
-      title: "Case Study Not Found",
+      title: "Case Study Not Found - Jared Buckley",
+      description: "The requested case study could not be found.",
     };
   }
 
   return {
-    title: `${caseStudy.title} - Jared Buckley`,
-    description: caseStudy.meta_description || `Case study: ${caseStudy.title}`,
+    title: `${study.title} - Case Study - Jared Buckley`,
+    description: study.meta_description || `Case study: ${study.title}. Insights on UX design, product strategy, and digital experiences.`,
+    keywords: ["case study", "UX design", "product strategy", "design process", "Jared Buckley", "digital products"],
+    openGraph: {
+      title: study.title,
+      description: study.meta_description || `Case study: ${study.title}. Insights on UX design and product strategy.`,
+      type: "article",
+      url: `https://www.bucklemeshoe.com/case-studies/${study.id}`,
+      images: study.images && study.images.length > 0 ? [
+        {
+          url: study.images[0].src,
+          width: 1200,
+          height: 630,
+          alt: study.images[0].alt || study.title,
+        },
+             ] : [
+         {
+           url: "/images/bucklemeshoe _ Social Media Sharing Image.png",
+           width: 1200,
+           height: 630,
+           alt: "Jared Buckley - Case Study",
+         },
+       ],
+      publishedTime: study.publishedDate,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: study.title,
+      description: study.meta_description || `Case study: ${study.title}. Insights on UX design and product strategy.`,
+      images: study.images && study.images.length > 0 ? [study.images[0].src] : ["/images/bucklemeshoe _ Social Media Sharing Image.png"],
+    },
   };
 }
 

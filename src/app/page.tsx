@@ -13,7 +13,6 @@ import { useState } from "react";
 import blogPosts from "@/data/blog-posts.json";
 import caseStudies from "@/data/case-studies.json";
 
-
 function UpworkIcon({ className }: { className?: string }) {
   return (
     <svg 
