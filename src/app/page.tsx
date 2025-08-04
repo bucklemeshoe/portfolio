@@ -222,7 +222,7 @@ export default function Home() {
                       <div className="flex items-start gap-3">
                         <Image src="/images/work/4 - partnerpage_logo.jpg" alt="PartnerPage" width={20} height={20} className="w-5 h-5 rounded-sm mt-1 flex-shrink-0" />
                         <div>
-                          <h4 className="font-semibold text-gray-900">PartnerPage (Funded Startup SF, California)</h4>
+                          <h4 className="font-semibold text-gray-900">PartnerPage (Funded Startup)</h4>
                           <h5 className="text-sm font-medium text-gray-800 mt-1">Product Designer</h5>
                           <p className="text-xs text-gray-500 mt-1">Mar 2020 - Nov 2020 · 9 mos · Full-time</p>
                           <p className="text-xs text-gray-500 mt-1">Remote San Fran</p>
