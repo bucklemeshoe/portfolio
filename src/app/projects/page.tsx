@@ -79,7 +79,8 @@ function ProjectCard({ project }: { project: Project }) {
         <h3 className="text-lg font-semibold text-zinc-800 mb-2 truncate">
           {(project.id === 'intergate-immigration' || 
             project.id === 'intergate-emigration' || 
-            project.id === 'notnormal-friday-five') && (
+            project.id === 'notnormal-friday-five' ||
+            project.id === 'pullnorth-cv-builder') && (
             <Link href={project.url} className="absolute inset-0" target="_blank" rel="noopener noreferrer" />
           )}
           {project.title}
@@ -91,7 +92,8 @@ function ProjectCard({ project }: { project: Project }) {
           </div>
           {(project.id === 'intergate-immigration' || 
             project.id === 'intergate-emigration' || 
-            project.id === 'notnormal-friday-five') && (
+            project.id === 'notnormal-friday-five' ||
+            project.id === 'pullnorth-cv-builder') && (
             <Link 
               href={project.url} 
               className="flex items-center hover:text-zinc-700 transition-colors"

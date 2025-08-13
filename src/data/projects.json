@@ -78,6 +78,19 @@
     "type": "product"
   },
   {
+    "id": "pullnorth-cv-builder",
+    "title": "Pull North CV Builder",
+    "description": "Yachting CV creation platform with guided forms, shareable URLs, and industry-standard formatting for premium yacht job applications.",
+    "url": "https://cv.pullnorth.com/",
+    "icon": "🚢",
+    "iconType": "emoji",
+    "image": "/images/projects/pullnorth_cv-builder.png",
+    "color": "from-blue-400 to-blue-600",
+    "category": "projects",
+    "year": "2025",
+    "type": "product"
+  },
+  {
     "id": "itinerary-app",
     "title": "Travel Itinerary App",
     "description": "Comprehensive travel planning app with real-time updates and collaborative trip management.",
