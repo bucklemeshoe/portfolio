@@ -4,6 +4,7 @@ import { Mail, MapPin, Copy, Check, Linkedin } from 'lucide-react';
 import { Container } from '@/components/Container';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
+import { ReferencesModal } from '@/components/ReferencesModal';
 import Link from 'next/link';
 
 function UpworkIcon({ className }: { className?: string }) {
@@ -150,6 +151,9 @@ export default function CoverLetterPWC() {
       </Container>
       
       <Footer />
+
+      {/* References Modal */}
+      <ReferencesModal />
     </div>
   );
 }
